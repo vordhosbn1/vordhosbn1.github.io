@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Intro</title>
+
+    <style>
+      h1{
+        color:green;
+        text-align: center;
+        width: 50%;
+        margin-top: 50px;
+        border-radius: 50px;
+        padding: 15px;
+        border: 5px solid red;
+
+      }
+      
+
+      div{
+        text-align: center;
+      }
+
+      .imageProgram{
+          width: 100%;
+          height: 300px;
+          border: 5px solid black;
+          object-fit: cover;
+
+
+        
+      }
+
+      .figureProgram{
+
+        width:40%;
+      }
+
+      span{
+        color:red;
+      }
+
+      #row{
+        display:flex;
+        justify-content:space-evenly;
+        flex-wrap:wrap;
+      }
+      h1:hover{
+        font-size: 2.5em;
+        color:blueviolet;
+      }
+
+      h1:active{
+        color:burlywood;
+      }
+      
+
+
+
+ 
+    </style>
 </head>
 <body>
 
-     <h1> School of Computing and Design </h1>
-  <p>  The School of Computing & Design (SCD) educates students to apply state-of-the-art information technology to solve real world communication problems in a socially responsible way.</p>
+        <h1 style="background-color:yellow">School of Computing & Design </h1>
+  <p>  The <span> School of Computing & Design </span> (SCD) educates students to apply state-of-the-art information technology to solve real world communication problems in a socially responsible way.</p>
 <h2> Degree programs </h2>
-  <div>
-    <figure>
-      <img src="https://tinyurl.com/cd-image" width="100">
+  <div id ="row">
+    <figure class="figureProgram">
+      <img class="imageProgram" src="https://tinyurl.com/cd-image" width="100">
       <figcaption> Communication Design </figcaption>
     </figure>
-    <figure>
-       <img src="https://tinyurl.com/cs-image" width="100">
+    <figure class="figureProgram">
+       <img class= "imageProgram" src="https://tinyurl.com/cs-image" width="100">
        <figcaption> Computer Science </figcaption>
     </figure>
   </div>
  <h3> Minor Programs </h3>
   <ul>
-    <li>Minor in Communication Design</li>
+    <li>Minor in <span>Communication Design</span></li>
     <li>Minor in CS and Information Systems </li>
    </ul>
 
