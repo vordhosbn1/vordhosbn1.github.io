@@ -1,0 +1,62 @@
+body{
+  background-color:black;
+}
+h1{
+    color: yellow; 
+    text-align: center; 
+    font-family: 'Pacifico', 
+    cursive;
+    font-size:max(2vw, 7vw); 
+    margin:0 auto;
+}
+div{
+    display:flex; 
+    justify-content:center
+}
+figure{
+    text-align: center; 
+    width:40%;
+}
+
+figcaption{
+    color:white; 
+    font-size:max(2vw, 4vw);
+}
+
+footer{
+    font-size:3vw; 
+    color:silver;
+    text-align:center; 
+    top-padding:10px;
+}
+#spring{
+    border-top-left-radius:25px;    
+}
+
+#summer{
+    border-top-right-radius:25px; 
+}
+
+#autumn{
+    border-bottom-left-radius:25px; 
+}
+
+#winter{
+    border-bottom-right-radius:25px; 
+}
+.imageSeason{
+    border:1px solid yellow; 
+    width:100%; 
+    height:auto
+    
+}
+
+#logo{
+
+    width:15%;
+}
+
+hr{
+    width:75%; margin-top:20px
+}
+
