@@ -5,7 +5,34 @@ h1{
     background-color: bisque;
 }
 
-.testTwo{
+ul, h4{
+    text-align: center;
+}
+
+
+
+table{
+        border-collapse: collapse;
+        margin: 2em auto;
+        border: 3px solid black;
+    
+}
+
+td{
+    border: solid black;
+    padding: .6rem 1rem;
+    text-align: center;
+}
+
+
+th{
+    border: solid black;
+    padding: .6rem 1rem;
+    text-align: center;
+    background: mintcream;
+}
+
+.team{
     /* width: 100%;
     height: 300px;
     border: 5px solid black; */
@@ -44,10 +71,23 @@ body{
 }
 
 .navButton{
+    /* background-color: rgba(175, 165, 165, 0.912);
+    color: solid rgb(0, 0, 0);
+    border: collapse; */
+    display:inline-block;
+    padding:.4rem .9rem;
+    border:2px solid black;
+    border-radius:.35rem;
+    background:white;
+    color:black; 
+}
 
-    background-color: black;
-    color: white;
+.navButton:hover{
+    transform: translateY(-1px);
+}
 
+.navButton.active{
+    outline: 3px solid white;
 }
 
 footer{
@@ -65,5 +105,9 @@ footer{
     display:flex; 
     justify-content:center
     
+}
+
+a:hover{
+    border:1px solid white;
 }
 

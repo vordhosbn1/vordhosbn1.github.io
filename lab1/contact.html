@@ -6,15 +6,21 @@
     <title>Document</title>
         <link href="lab1.css"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet"> 
 </head>
+<header class="asimovian-regular">
+    <h1>Contact</h1>
+</header>
 <body>
 
-    <h1>Team 2</h1>
-
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <br>
+    <div id="navBar" class="asimovian-regular">
+    <a class="navButton" href="index.html">Home</a>
+    <a class="navButton" href="about.html">About</a>
+    <a class="navButton active" href="contact.html">Contact</a>
+    </div>
+    
 
     <div id="contactForm">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_m91t63G6-VI_Y_vcDdr_Zz48vz_sFNYGdlJO-5gRq2NhnA/viewform?embedded=true" 
@@ -28,6 +34,8 @@
     <p>CST336 Internet Programming. 2025. Team 2.</p>
     <p><b>Disclaimer:</b> This information in this webpage is real.</p>
     <p>It is used for academic purposes only.</p>
-    <img src="img/csumb.jpg"  height=150 width=150 alt="csumb">
+    <div class="team">
+    <img id="footImg" src="img/csumb.jpg"alt="csumb">
+    </div>
 </footer>
 </html>

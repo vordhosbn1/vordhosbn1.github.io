@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <link href="lab1.css"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet"> 
 </head>
+<header class="asimovian-regular">
+    <h1>About</h1>
+</header>
 <body>
     
-    <h1>Team 2</h1>
 
-    <br>
 
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <br>
+    <div id="navBar" class="asimovian-regular">
+    <a class="navButton" href="index.html">Home</a>
+    <a class="navButton active" href="about.html">About</a>
+    <a class="navButton" href="contact.html">Contact</a>
+    </div>
+    
 
     <table>
         <tr>
@@ -34,12 +42,8 @@
             <td>Python</td>
             <td>7</td>
         </tr>
-        
-    
-    
-    
-    
         </table>
+
         <h4><b>Our common hobbies:</b></h4>
         <ul>
             <li>We like to play video games. </li>
@@ -49,10 +53,12 @@
         <br>
     
 </body>
-<!-- <footer> -->
+<footer>
     <p>CST336 Internet Programming. 2025. Team 2.</p>
     <p><b>Disclaimer:</b> This information in this webpage is real.</p>
     <p>It is used for academic purposes only.</p>
-    <img src="img/csumb.jpg" height=150 width=150 alt="csumb">
-<!-- </footer> -->
+    <div class="team">
+    <img id="footImg" src="img/csumb.jpg" alt="csumb">
+    </div>
+</footer>
 </html>
