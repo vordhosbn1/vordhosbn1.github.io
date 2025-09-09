@@ -1,0 +1,24 @@
+h1{
+    text-align:center;
+}
+
+.image{
+    border: 5px solid black;
+    border-radius:25px;
+}
+
+#imageFlex{
+
+    display:flex; 
+    justify-content:center;
+
+}
+
+figure{
+    text-align: center; 
+    width:40%;
+}
+
+img{
+    width:15em;
+}
