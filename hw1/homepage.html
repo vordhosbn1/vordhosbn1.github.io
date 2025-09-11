@@ -6,46 +6,65 @@
     <title>HW1</title>
     <link href="styles.css" rel="stylesheet">
 </head>
+
+<body>
 <header>
     <h1>Hallucinations in language models</h1>
+    <nav>
+    <a href="homepage.html">Home</a>
+    <a href="findings.html">Findings</a>
+    <a href="analysis.html">Analysis</a>
+    <a href="conclusions.html">Conclusions</a>
+    </nav>
 </header>
-<body>
 
     <div id="imageFlex">
 
         <figure>
         <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Claude_AI_logo.svg/1280px-Claude_AI_logo.svg.png" alt="Claude">
+        <figcaption>Claude</figcaption>
         </figure>
 
         <figure>
         <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/ChatGPT-Logo.png/1280px-ChatGPT-Logo.png" alt="ChatGPT">
+        <figcaption>ChatGPT</figcaption>
         </figure>
         
         <figure>
         <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1024px-Google_Gemini_logo.svg.png" alt="Gemini">
+        <figcaption>Google Gemini</figcaption>
         </figure>
 
         <figure>
         <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/New_Replit_Logo.svg/768px-New_Replit_Logo.svg.png" alt="ReplitAI">
+        <figcaption>ReplitAI</figcaption>
         </figure>
     </div>
+    
+    <div class="paper-wrapper">
+    <a class="paper" href="https://openai.com/index/why-language-models-hallucinate/" 
+    target="_blank"> 
+        Link to the source
+    </a>
+    </div>
+    
+<p>Large language models are powerful systems trained to 
+    generate text, but they are also prone to making mistakes that 
+    researchers call hallucinations. You may have experienced these "hallucinations". 
+    These are moments when a model 
+    confidently produces an answer that is not true. Unlike a human 
+    who might say "I don’t know." when they do not know the answer to a topic, a model is rewarded more for giving some
+     answer than for refusing to try, even if that answer is wrong.</p>
 
-
-    <p>Recently, the OpenAI team has studied and found the reasons as to why language models experience "hiccups" 
-        or sometimes called "hallucinations".</p>
-    <p1>The reason as to why such a thing happens in the first place is not a bug, 
-        but in their actual programming, which they are essentially a binary programmed model.</p1>
-    <a href="https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf" target="_blank"> 
-        Link of the paper. </a>
+<p>Because of this design, hallucinations are not bugs in the 
+    traditional sense—they are side effects of how the models learn 
+    and how their responses are scored. This makes them a critical 
+    area of study for developers, companies, and everyday users. 
+ For my HW1, I will talk about and look at what researchers have found, examine a real-world case, and discuss possible ways forward.</p>
 
 
         <br>
 
-
-
-
-
-        <a href="findings.html" target="_self">Next</a>
     
 </body>
 </html>
