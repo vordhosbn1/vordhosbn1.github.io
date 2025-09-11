@@ -57,7 +57,8 @@ body{
     border: 5px solid black;
     border-radius:25px;
     width: 10rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,.1);  /* another use of another css property  */
+    box-shadow: 0 4px 10px black; /*  another use of another css property  */
+    /* 20px 20px 50px 10px pink inset; */ 
     background: white;
 }
 
