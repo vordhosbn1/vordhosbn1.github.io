@@ -9,22 +9,18 @@
 <body img="img/timer.jpg">
 
     <header>
-        <h1>Guess the Number!</h1>
+            <h1>Guess the Number!</h1>
     </header>
 
-    <input id="guessBox" type="text" size="5">
-    <button id="guessBtn"> Guess! </button>
-    
-    <br>
-    <br>
+<input id="guessBox" type="text" placeholder="Enter a number from 1-99!">
+<button id="guessBtn">Guess!</button>
+<button id="resetBtn" style="display:none;">Play Again!</button>
 
-    <div id="yourGuess"></div>
+<div id="yourGuess"></div>
     
-    <h1>
-        Previous Guesses:
-    </h1>
-    <br>
-    <div id="answers"></div>
+    <h2>Previous Guess</h2>
+    <div id="userGuesses"></div>
+
     <script src="js/script.js"></script>
     
 </body>

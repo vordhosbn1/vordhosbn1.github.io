@@ -1,53 +1,85 @@
-document.querySelector("#guessBtn").addEventListener("click", guess);
+document.querySelector("#guessBtn").addEventListener("click", onGuess);
+document.querySelector("#resetBtn").addEventListener("click", resetGame);
 
 
+let secret, tries, gameOver;
+const MAX_TRIES = 7;
+// didnt declare a const, it was reading it at index 0-> index 7 which is "6" instead of "7" here. 676767676767
 
-let correctGuess = Math.floor(Math.random() * 99 + 1);
-let numOfGuess = 6;
+startNewRound();
 
+function startNewRound() {
+  secret = Math.floor(Math.random() * 99) + 1; // 1..99
+  tries = 0;
+  gameOver = false;
 
-function endGame(msg, color){
-    yourGuess.textContent = msg;
-    yourGuess.style.color = color;
-    gameOver = true;
-    guessBtn.disabled = true;
-    guessBox.disabled = true;
-
+  document.querySelector("#guessBox").value = "";
+  document.querySelector("#guessBox").disabled = false;
+  document.querySelector("#yourGuess").textContent = "";
+  document.querySelector("#answers").textContent = "";
+  document.querySelector("#guessBtn").style.display = "inline-block";
+  document.querySelector("#resetBtn").style.display = "none";
+  document.querySelector("#guessBox").focus();
 }
 
-function guess(){
-    
-    let userGuess = document.querySelector("#guessBox").value;
-    //alert(userGuess);
-    document.querySelector("#answers").textContent += `${userGuess} `;
-    if(numOfGuess > 0){
-        if(userGuess >= 100){
-            alert("Guess was too big.");
-        } 
-        if (userGuess <= 0){
-            alert("Guess was too small.");
-        }
-        if (userGuess == correctGuess){
-            document.querySelector("#yourGuess").textContent = "Your guess was correct.";
-            document.querySelector("#yourGuess").style.color = "#39FF14"
-        }
-        if(userGuess > correctGuess){
-            document.querySelector("#yourGuess").textContent = "Your guess was too high.";
-            document.querySelector("#yourGuess").style.color = "orange"
-        }
-        if(userGuess < correctGuess){
-            document.querySelector("#yourGuess").textContent = "Your guess was too low.";
-            document.querySelector("#yourGuess").style.color = "blue"
-        }
-    }
-    if(numOfGuess <= 0){
-       document.querySelector("#yourGuess").textContent = "You lose!"
-       document.querySelector("#yourGuess").style.color = "red"
-       if(userGuess == correctGuess){
-            document.querySelector("#yourGuess").textContent = "You still lose."
-            // note, remove this later since we should be able to stop the game after the user even tries to go past 7 tries. 
-            document.querySelector("#yourGuess").style.color = "red"
-       }
-    }
-    numOfGuess--;
+function endGame(message, color) {
+  const msg = document.querySelector("#yourGuess");
+  msg.textContent = message;
+  msg.style.color = color;
+
+  gameOver = true;
+  document.querySelector("#guessBox").disabled = true;
+  document.querySelector("#guessBtn").style.display = "none";
+  document.querySelector("#resetBtn").style.display = "inline-block";
+}
+
+function onGuess() {
+  if (gameOver) return;
+
+  const raw = document.querySelector("#guessBox").value.trim();
+  const guess = Number(raw);
+
+
+  if (!Number.isInteger(guess) || guess < 1 || guess > 99) {
+    const msg = document.querySelector("#yourGuess");
+    msg.textContent = "Enter a whole number from 1 to 99.";
+    msg.style.color = "red";
+    return;
+    // shouldnt take up a guess since its outside of the range.
+  }
+
+
+  document.querySelector("#userGuesses").textContent += guess + " ";
+
+
+  tries++;
+
+ 
+  if (guess === secret) {
+    endGame(`Congrats! You got it in ${tries} ${tries === 1 ? "try" : "tries"}.`, "green");
+    return;
+  }
+
+  if (tries >= MAX_TRIES) {
+    endGame(`Sorry, you lost! The number was ${secret}.`, "red");
+    return;
+  }
+
+ 
+  const msg = document.querySelector("#yourGuess");
+  if (guess < secret) {
+    msg.textContent = `Too low. You have ${MAX_TRIES - tries} guesses left.`;
+    msg.style.color = "blue"
+  } else {
+    msg.textContent = `Too high. You have ${MAX_TRIES - tries} guesses left.`;
+    msg.style.color = "orange";
+  }
+
+  // optional: clear and refocus input
+//   document.querySelector("#guessBox").value = "";
+//   document.querySelector("#guessBox").focus();
+}
+
+function resetGame() {
+  startNewRound();
 }
