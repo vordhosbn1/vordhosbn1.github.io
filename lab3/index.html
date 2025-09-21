@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Quiz</title>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
+</head>
+<body>
+    
+    <h1>CSS Quiz</h1>
+
+    <div>1. What CSS property changes the text color? </div>
+
+    <label>
+        <input type="radio" name="q1" value="Text-Color"> Text-Color
+    </label>
+    <label>
+        <input type="radio" name="q1" value="font-color"> Font-Color
+    </label>   
+    <label>
+        <input type="radio" name="q1" value="color"> color
+    </label>      
+    <div id="feedback" class="panel"></div>
+
+    <br><br>
+
+    <div>2. What CSS is used to link an image? </div>
+
+    <label>
+        <input type="checkbox" id="q2a" value="Text-Color"> image src
+    </label>
+    <label>
+        <input type="checkbox" id="q2b" value="font-color"> link href
+    </label>   
+    <label>
+        <input type="checkbox" id="q2c" value="color"> Neither
+    </label> 
+        <div id="feedback" class="panel"></div>
+
+    <br><br>
+
+    <div>3. What CSS property changes the text color? </div>
+    <div id="q3Options"></div>
+        <div id="feedback" class="panel"></div>
+
+    <br><br>
+
+    <div class="panel">4. How many headers are there </div>
+    <input type="number" id="q4">
+
+    <br><br>
+
+    <div>5. How many questions are you supposed to have for this example?</div>
+    <select id="selectInput">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>None</option>
+    </select>
+        <div id="feedback" class="panel"></div>
+    <br><br>
+
+    <button id="quizBtn"> Submit Quiz </button>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
