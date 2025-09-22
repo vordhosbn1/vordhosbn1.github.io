@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW2: Dice Duel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Dice Duel</h1>
+        <p>Player vs. Computer. Higher total wins the round; First to target wins the match.</p>
+    </header>
+
+    <main class="card">
+        <section class="controls">
+            <label>
+                Bet ($):
+                <input id="bet" type="number" min="1" step="1" value="10">
+            </label>
+
+            <label>
+                Best of:
+                <select id="bestOf">
+                    <option value="1"></option>
+                    <option value="3"></option>
+                    <option value="5"></option>
+                    <option value="7"></option>
+                </select>
+            </label>
+            <button id="rollBtn">Roll the Bones</button>
+            <button id="resetBtn" class="secondary">Reset</button>
+        </section>
+
+        <section id="statusBar" class="status">
+            <span id="roundInfo">Round 1</span>
+            <span id="attemptsLeft">Attempts: 2</span>
+            <span id="bank">Bank: $100</span>
+            <span id="score">Wins: 0 | Losses: 0</span>
+        </section>
+
+
+ <section class="arena">
+      <div class="side" id="playerPane">
+        <h2>You</h2>
+        <div class="dice">
+          <img id="pDie1" alt="player die 1">
+          <img id="pDie2" alt="player die 2">
+        </div>
+        <div class="total">Total: <span id="pTotal">0</span></div>
+      </div>
+
+
+      
+      <div class="side" id="cpuPane">
+        <h2>Computer</h2>
+        <div class="dice">
+          <img id="cDie1" alt="computer die 1">
+          <img id="cDie2" alt="computer die 2">
+        </div>
+        <div class="total">Total: <span id="cTotal">0</span></div>
+      </div>
+    </section>
+
+    <section class="message">
+      <p id="msg">Click “Roll” to start!</p>
+    </section>
+
+    <section class="history">
+      <h3>Round History</h3>
+      <ol id="historyList"></ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>HW2: Dice Duel</small>
+  </footer>
+</body>
+<script src="js/script.js"></script>
+</html>
