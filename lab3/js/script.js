@@ -29,36 +29,31 @@ function displayQ3Options(){
 
 function gradeQuiz(){
 
-    let userAnswer1 = document.querySelector("input[name=q1]:checked").value;
-    let userAnswer2 = document.querySelector("input[id=q2a]:checked").value;
-    // let userAnswer3 = document.querySelector("input[id=q3Options]:checked").value;
-    // let userAnswer4 = document.querySelector("input[name=q4]:checked").value;
-    // let userAnswer5 = document.querySelector("input[name=q5]:checked").value;
-    
+    let userGrade1 = document.querySelector("input[name=q1]:checked").value;
     let feedback = document.querySelector("#feedback");
     feedback.textContent = ""; 
 
     // alert(userAnswer1);
 
-    if (userAnswer1 == "color") {
+    if (userGrade1 == 100) {
         // alert("test");
-        feedback.textContent = "Right"; 
+        feedback.textContent = "A+"; 
         feedback.style.color = "green";
 
-    } else {
+    } else if (userGrade1 == 75) {
 
-        feedback.textContent = "Wrong";
-        feedback.style.color = "red";
+        feedback.textContent = "C+";
+        feedback.style.color = "orange";
 
     }
-        if (userAnswer2 == "Neither") {
+       else if (userAnswer2 == 50) {
         // alert("test");
-        feedback.textContent = "Right"; 
-        feedback.style.color = "green";
+        feedback.textContent = "D+"; 
+        feedback.style.color = "orange";
 
     } else {
 
-        feedback.textContent = "Wrong";
+        feedback.textContent = "F";
         feedback.style.color = "red";
 
     }

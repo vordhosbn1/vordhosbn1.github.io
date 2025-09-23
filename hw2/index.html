@@ -9,7 +9,7 @@
 <body>
     <header class="site-header">
         <h1>Dice Duel</h1>
-        <p>Player vs. Computer. Higher total wins the round; First to target wins the match.</p>
+        <p>Player vs. Computer. Higher total wins the round; First to target wins.</p>
     </header>
 
     <main class="card">
@@ -22,12 +22,13 @@
             <label>
                 Best of:
                 <select id="bestOf">
-                    <option value="1"></option>
-                    <option value="3"></option>
-                    <option value="5"></option>
-                    <option value="7"></option>
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="7">7</option>
                 </select>
             </label>
+
             <button id="rollBtn">Roll the Bones</button>
             <button id="resetBtn" class="secondary">Reset</button>
         </section>
@@ -40,9 +41,9 @@
         </section>
 
 
- <section class="arena">
+ <section class="gameArea">
       <div class="side" id="playerPane">
-        <h2>You</h2>
+        <h2>YOU</h2>
         <div class="dice">
           <img id="pDie1" alt="player die 1">
           <img id="pDie2" alt="player die 2">
@@ -53,7 +54,7 @@
 
       
       <div class="side" id="cpuPane">
-        <h2>Computer</h2>
+        <h2>CPU</h2>
         <div class="dice">
           <img id="cDie1" alt="computer die 1">
           <img id="cDie2" alt="computer die 2">
@@ -62,8 +63,9 @@
       </div>
     </section>
 
+    <br><br>
     <section class="message">
-      <p id="msg">Click “Roll” to start!</p>
+      <p id="msg">Click "Roll the Bones" to start the game.</p>
     </section>
 
     <section class="history">
@@ -73,8 +75,10 @@
   </main>
 
   <footer class="site-footer">
-    <small>HW2: Dice Duel</small>
+    <p>Dice Duel Game</p>
   </footer>
+
+  
 </body>
 <script src="js/script.js"></script>
 </html>
