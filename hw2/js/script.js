@@ -1,4 +1,3 @@
-// event listeneres
 const betEl = document.querySelector("#bet");
 const bestOfEl = document.querySelector("#bestOf");
 const rollBtn = document.querySelector("#rollBtn");
@@ -60,7 +59,7 @@ function resetRoundStyles() {
 
 
 function startMatch() {
-
+// n / 2 since if you are bo3, then if you win 2-0, then you automatically "mercy"
   const N = parseInt(bestOfEl.value, 10);
   roundsToWin = Math.ceil(N / 2);
   playerRounds = 0;
@@ -94,8 +93,11 @@ function rollRound() {
   const pTotal = d1 + d2;
   const cTotal = e1 + e2;
 
-  setDice(pDie1, d1); setDice(pDie2, d2);
-  setDice(cDie1, e1); setDice(cDie2, e2);
+  setDice(pDie1, d1); 
+  setDice(pDie2, d2);
+  setDice(cDie1, e1); 
+  setDice(cDie2, e2);
+
   pTotalEl.textContent = String(pTotal);
   cTotalEl.textContent = String(cTotal);
 
@@ -132,6 +134,8 @@ function rollRound() {
 rollBtn.addEventListener("click", rollRound);
 resetBtn.addEventListener("click", startMatch);
 bestOfEl.addEventListener("change", startMatch);
+
+
 
 
 startMatch();
