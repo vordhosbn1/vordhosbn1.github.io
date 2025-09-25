@@ -1,0 +1,43 @@
+const person = {
+   firstName: "John",
+    lastName: "Doe",
+                age: 20,
+     eyeColor: "blue",
+     siblings: [
+        {firstName: "Alice",
+                age: 20,
+            eyeColor: "blue"
+        },
+        {firstName: "Bob",
+            age: 21,
+            eyeColor: "brown"
+        }
+    ]
+    //  accessing a key and its value with  a special character is like this
+    // console.log(person["example-Name"]);
+};
+
+
+
+// console.log(person.firstName);
+
+// // console.log(siblings[0]);
+
+// console.log(person.siblings[0].firstName);
+
+// console.log(person.siblings[1].firstName);
+
+
+let data = {"type":"FeatureCollection","metadata":{"generated":1758671340000,"url":"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2025-09-01&endtime=2025-09-31&latitude=36.6&longitude=-121.9&maxradius=10&minmag=4","title":"USGS Earthquakes","status":200,"api":"1.14.1","count":10},"features":[{"type":"Feature","properties":{"mag":4.29,"place":"2 km ESE of Berkeley, CA","time":1758534972520,"updated":1758671320777,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/nc75240492","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc75240492&format=geojson","felt":31659,"cdi":4.4,"mmi":4.793,"alert":"green","status":"reviewed","tsunami":1,"sig":723,"net":"nc","code":"75240492","ids":",ew1758534970,nc75240492,at00t2zi9o,us7000qxt3,","sources":",ew,nc,at,us,","types":",dyfi,focal-mechanism,impact-link,losspager,moment-tensor,nearby-cities,oaf,origin,phase-data,scitech-link,shake-alert,shakemap,","nst":177,"dmin":0.01187,"rms":0.13,"gap":12,"magType":"mw","type":"earthquake","title":"M 4.3 - 2 km ESE of Berkeley, CA"},"geometry":{"type":"Point","coordinates":[-122.254,37.863,7.58]},"id":"nc75240492"},
+{"type":"Feature","properties":{"mag":5.1,"place":"181 km WSW of Port Orford, Oregon","time":1757446303854,"updated":1757456549720,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/us7000qv3g","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000qv3g&format=geojson","felt":5,"cdi":2,"mmi":null,"alert":null,"status":"reviewed","tsunami":0,"sig":401,"net":"us","code":"7000qv3g","ids":",us7000qv3g,usauto7000qv3g,","sources":",us,usauto,","types":",dyfi,internal-moment-tensor,moment-tensor,origin,phase-data,","nst":47,"dmin":1.724,"rms":0.87,"gap":171,"magType":"mww","type":"earthquake","title":"M 5.1 - 181 km WSW of Port Orford, Oregon"},"geometry":{"type":"Point","coordinates":[-126.6691,42.4397,10]},"id":"us7000qv3g"},
+{"type":"Feature","properties":{"mag":4.4,"place":"162 km W of Port Orford, Oregon","time":1757446263620,"updated":1757447796040,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/us7000qv3f","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000qv3f&format=geojson","felt":null,"cdi":null,"mmi":null,"alert":null,"status":"reviewed","tsunami":0,"sig":298,"net":"us","code":"7000qv3f","ids":",us7000qv3f,","sources":",us,","types":",origin,phase-data,","nst":47,"dmin":1.564,"rms":0.61,"gap":197,"magType":"mb","type":"earthquake","title":"M 4.4 - 162 km W of Port Orford, Oregon"},"geometry":{"type":"Point","coordinates":[-126.4478,42.4765,10]},"id":"us7000qv3f"},
+{"type":"Feature","properties":{"mag":4.9,"place":"181 km WSW of Port Orford, Oregon","time":1757444524025,"updated":1757448131959,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/us7000qv38","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000qv38&format=geojson","felt":1,"cdi":2,"mmi":null,"alert":null,"status":"reviewed","tsunami":0,"sig":370,"net":"us","code":"7000qv38","ids":",us7000qv38,","sources":",us,","types":",dyfi,moment-tensor,origin,phase-data,","nst":48,"dmin":1.707,"rms":1.17,"gap":181,"magType":"mww","type":"earthquake","title":"M 4.9 - 181 km WSW of Port Orford, Oregon"},"geometry":{"type":"Point","coordinates":[-126.6499,42.3804,10]},"id":"us7000qv38"},
+{"type":"Feature","properties":{"mag":4.6,"place":"146 km WSW of Port Orford, Oregon","time":1757435530034,"updated":1758645738667,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/us6000rc9k","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000rc9k&format=geojson","felt":null,"cdi":null,"mmi":null,"alert":null,"status":"reviewed","tsunami":0,"sig":326,"net":"us","code":"6000rc9k","ids":",us6000rc9k,","sources":",us,","types":",moment-tensor,oaf,origin,phase-data,","nst":148,"dmin":1.393,"rms":0.61,"gap":185,"magType":"mww","type":"earthquake","title":"M 4.6 - 146 km WSW of Port Orford, Oregon"},"geometry":{"type":"Point","coordinates":[-126.2233,42.4202,14.885]},"id":"us6000rc9k"},
+{"type":"Feature","properties":{"mag":4.3,"place":"184 km WSW of Port Orford, Oregon","time":1757418429266,"updated":1757462232699,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/us7000quzl","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000quzl&format=geojson","felt":2,"cdi":2.2,"mmi":null,"alert":null,"status":"reviewed","tsunami":0,"sig":285,"net":"us","code":"7000quzl","ids":",us7000quzl,","sources":",us,","types":",dyfi,origin,phase-data,","nst":95,"dmin":1.749,"rms":1.15,"gap":185,"magType":"mb","type":"earthquake","title":"M 4.3 - 184 km WSW of Port Orford, Oregon"},"geometry":{"type":"Point","coordinates":[-126.7031,42.4299,10]},"id":"us7000quzl"},
+{"type":"Feature","properties":{"mag":4.9,"place":"167 km WSW of Port Orford, Oregon","time":1757397543039,"updated":1757443664030,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/us7000quxl","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000quxl&format=geojson","felt":4,"cdi":2.7,"mmi":null,"alert":null,"status":"reviewed","tsunami":0,"sig":370,"net":"us","code":"7000quxl","ids":",us7000quxl,usauto7000quxl,","sources":",us,usauto,","types":",dyfi,internal-moment-tensor,origin,phase-data,","nst":69,"dmin":1.593,"rms":1.46,"gap":186,"magType":"mb","type":"earthquake","title":"M 4.9 - 167 km WSW of Port Orford, Oregon"},"geometry":{"type":"Point","coordinates":[-126.4932,42.43,11.239]},"id":"us7000quxl"},
+{"type":"Feature","properties":{"mag":4.4,"place":"174 km WSW of Port Orford, Oregon","time":1757391308856,"updated":1757399123858,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/us7000qux0","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000qux0&format=geojson","felt":2,"cdi":1,"mmi":null,"alert":null,"status":"reviewed","tsunami":0,"sig":298,"net":"us","code":"7000qux0","ids":",us7000qux0,","sources":",us,","types":",dyfi,origin,phase-data,","nst":40,"dmin":1.644,"rms":1.03,"gap":200,"magType":"mb","type":"earthquake","title":"M 4.4 - 174 km WSW of Port Orford, Oregon"},"geometry":{"type":"Point","coordinates":[-126.5647,42.3781,10]},"id":"us7000qux0"},
+{"type":"Feature","properties":{"mag":5.8,"place":"165 km WSW of Port Orford, Oregon","time":1757390881259,"updated":1758601084092,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/us7000quwy","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000quwy&format=geojson","felt":50,"cdi":4.1,"mmi":3.928,"alert":"green","status":"reviewed","tsunami":1,"sig":538,"net":"us","code":"7000quwy","ids":",us7000quwy,at00t2azhg,usauto7000quwy,pt25252000,","sources":",us,at,usauto,pt,","types":",dyfi,impact-link,internal-moment-tensor,internal-origin,losspager,moment-tensor,oaf,origin,phase-data,shakemap,","nst":32,"dmin":1.552,"rms":0.6,"gap":234,"magType":"mww","type":"earthquake","title":"M 5.8 - 165 km WSW of Port Orford, Oregon"},"geometry":{"type":"Point","coordinates":[-126.4413,42.3696,13.843]},"id":"us7000quwy"},
+{"type":"Feature","properties":{"mag":4.2,"place":"68 km ENE of San Vicente, Mexico","time":1756795316323,"updated":1757262955260,"tz":null,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/us7000qt7m","detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000qt7m&format=geojson","felt":29,"cdi":3.8,"mmi":null,"alert":null,"status":"reviewed","tsunami":0,"sig":282,"net":"us","code":"7000qt7m","ids":",ew1756795340,ci41281176,us7000qt7m,","sources":",ew,ci,us,","types":",dyfi,nearby-cities,origin,phase-data,scitech-link,shake-alert,","nst":35,"dmin":0.529,"rms":0.91,"gap":128,"magType":"mb","type":"earthquake","title":"M 4.2 - 68 km ENE of San Vicente, Mexico"},"geometry":{"type":"Point","coordinates":[-115.5551,31.4932,10]},"id":"us7000qt7m"}],"bbox":[-126.7031,31.4932,7.58,-115.5551,42.4765,14.885]}
+
+
+console.log(data.features[0].properties.place);

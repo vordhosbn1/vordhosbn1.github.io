@@ -1,10 +1,130 @@
-.history{
-    text-align: center;
-    margin-top: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    width: 300px;
-    margin: auto;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: cornsilk;
+  color: black;
+  text-align: center;
+}
+
+header {
+  background-color: white;
+  padding: 1rem;
+  border-bottom: 2px solid lightgray;
+}
+
+h1 {
+  margin: 0.5rem 0;
+  color: navy;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  color: gray;
+}
+
+#main {
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid lightgray;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+input, select {
+  padding: 0.4rem;
+  margin: 0.5rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 6px;
+  border: 2px solid royalblue;
+  background-color: royalblue;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: dodgerblue;
+}
+
+button:disabled {
+  background-color: lightgray;
+  border-color: gray;
+  color: gray;
+}
+
+#statusBar {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#feedback {
+  margin: 1rem auto;
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: floralwhite;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  max-width: 500px;
+}
+
+#playerPane, #cpuPane {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+#playerPane {
+  background-color: honeydew;
+}
+
+#cpuPane {
+  background-color: seashell;
+}
+
+.dice img {
+  width: 60px;
+  height: 60px;
+  margin: 0.25rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.total {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.side.win{
+    border-color:green;
+    box-shadow: 0 0 8px green;
+
+}
+
+/* this should have the classlist "lose" from the js, likewise for the win   */
+
+.side.lose{ 
+    border: crimson;
+    box-shadow: 0 0 8px crimson;
+}
+
+#historyList {
+  list-style: none;
+  padding-left: 0;
+}
+
+#historyList li {
+  padding: 0.25rem;
+  border-bottom: 1px dotted lightgray;
 }
