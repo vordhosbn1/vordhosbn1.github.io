@@ -1,71 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 3: Quiz</title>
-    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 3: OSRS Quiz</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    
-    <h1>CSS Quiz</h1>
+  <header>
+    <h1>Old School RuneScape Quiz</h1>
+    <p>Five questions | 20 points each</p>
+  </header>
 
-    <div>1. What CSS property changes the text color? </div>
+  <main id="quiz">
 
-    <label>
-        <input type="radio" name="q1" value="Text-Color"> Text-Color
-    </label>
-    <label>
-        <input type="radio" name="q1" value="font-color"> Font-Color
-    </label>   
-    <label>
-        <input type="radio" name="q1" value="color"> color
-    </label>      
-    <div id="feedback" class="panel"></div>
+    <section class="qblock" id="q1">
+      <h2>1. What is currently the best melee demonbane weapon in OSRS?</h2>
 
-    <br><br>
+      <label>
+        <input type="radio" name="q1" value="darklight"/>
+        Darklight
+        <img src="img/darklight.png" alt="Darklight"/>
+      </label>
 
-    <div>2. What CSS is used to link an image? </div>
+      <label>
+        <input type="radio" name="q1" value="arclight"/>
+        Arclight
+        <img src="img/arclight.png" alt="Arclight"/>
+      </label>
 
-    <label>
-        <input type="checkbox" id="q2a" value="Text-Color"> image src
-    </label>
-    <label>
-        <input type="checkbox" id="q2b" value="font-color"> link href
-    </label>   
-    <label>
-        <input type="checkbox" id="q2c" value="color"> Neither
-    </label> 
-        <div id="feedback" class="panel"></div>
+      <label>
+        <input type="radio" name="q1" value="emberlight"/>
+        Emberlight
+        <img src="img/emberlight.png" alt="Emberlight"/>
+      </label>
 
-    <br><br>
+      <label>
+        <input type="radio" name="q1" value="ohtani"/>
+        Shohei Ohtani
+        <img src="img/ohtani.png" alt="Shohei Ohtani"/>
+      </label>
 
-    <div>3. What CSS property changes the text color? </div>
-    <div id="q3Options"></div>
-        <div id="feedback" class="panel"></div>
+      <div class="feedback">
+        <img class="icon" alt="" />
+        <span class="text"></span>
+      </div>
+    </section>
 
-    <br><br>
+    <section class="qblock" id="q2">
+      <h2>2. Which raid is located in the Great Kingdom of Kourend?</h2>
 
-    <div class="panel">4. How many headers are there </div>
-    <input type="number" id="q4">
+      <label>
+        <input type="radio" name="q2" value="cox"/>
+        Chambers of Xeric
+        <img src="img/cox.png" alt="Chambers of Xeric"/>
+      </label>
 
-    <br><br>
+      <label>
+        <input type="radio" name="q2" value="tob"/>
+        Theatre of Blood
+        <img src="img/tob.png" alt="Theatre of Blood"/>
+      </label>
 
-    <div>5. How many questions are you supposed to have for this example?</div>
-    <select id="selectInput">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>None</option>
-    </select>
-        <div id="feedback" class="panel"></div>
-    <br><br>
+      <label>
+        <input type="radio" name="q2" value="toa"/>
+        Tombs of Amascut
+        <img src="img/toa.png" alt="Tombs of Amascut"/>
+      </label>
 
-    <button id="quizBtn"> Submit Quiz </button>
+      <label>
+        <input type="radio" name="q2" value="skenes"/>
+        Paul Skenes
+        <img src="img/skenes.png" alt="Paul Skenes"/>
+      </label>
 
-    <script src="js/script.js"></script>
+      <div class="feedback">
+        <img class="icon" alt=""/>
+        <span class="text"></span>
+      </div>
+    </section>
 
+    <section class="qblock" id="q3">
+      <h2>3. What is the max total level in OSRS?</h2>
+      <label for="q3num" class="visually-hidden">Enter a number</label>
+      <input id="q3num" type="number" min="1" max="3000" />
+      <div class="feedback">
+        <img class="icon" alt=""/>
+        <span class="text"></span>
+      </div>
+    </section>
+
+    <section class="qblock" id="q4">
+      <h2>4. Select all bosses you can fight with Slayer level 96.</h2>
+
+      <label>
+        <input type="checkbox" value="cerb"/>
+        Cerberus
+        <img src="img/cerberus.png" alt="Cerberus"/>
+      </label>
+
+      <label>
+        <input type="checkbox" value="hydra"/>
+        Alchemical Hydra
+        <img src="img/hydra.png" alt="Alchemical Hydra"/>
+      </label>
+
+      <label>
+        <input type="checkbox" value="araxxor"/>
+        Araxxor
+        <img src="img/araxxor.png" alt="Araxxor"/>
+      </label>
+
+      <label>
+        <input type="checkbox" value="zuk"/>
+        TzKal-Zuk
+        <img src="img/zuk.png" alt="TzKal-Zuk"/>
+      </label>
+
+      <div class="feedback">
+        <img class="icon" alt=""/>
+        <span class="text"></span>
+      </div>
+    </section>
+
+    <section class="qblock" id="q5">
+      <h2>5. Which is the best-in-slot melee armour set?</h2>
+
+      <label>
+        <input type="radio" name="q5" value="torva"/>
+        Torva
+        <img src="img/torva.png" alt="Torva"/>
+      </label>
+
+      <label>
+        <input type="radio" name="q5" value="bandos"/>
+        Bandos
+        <img src="img/bandos.png" alt="Bandos"/>
+      </label>
+
+      <label>
+        <input type="radio" name="q5" value="masori"/>
+        Fortified Masori
+        <img src="img/masori.png" alt="Fortified Masori"/>
+      </label>
+
+      <label>
+        <input type="radio" name="q5" value="none"/>
+        None
+
+      </label>
+
+      <div class="feedback">
+        <img class="icon" alt=""/>
+        <span class="text"></span>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="submitBtn">Submit Quiz</button>
+      <button id="resetBtn" type="button">Reset</button>
+    </section>
+
+    <section class="results">
+      <p id="scoreLine">Score: 0 / 100</p>
+      <p id="triesLine">Times taken: 0</p>
+      <p id="congrats"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>OSRS Quiz</p>
+    <br /><br/>
+    <p>CSUMB 2025.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

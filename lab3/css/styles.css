@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+  color: black;
+}
+
+header {
+  background-color: navy;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.qblock {
+  background: white;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 700px;
+}
+
+.qblock h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: .75rem;
+  color: black;
+}
+
+.qblock label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin: .4rem 1rem .4rem 0;
+  cursor: pointer;
+}
+
+.qblock input[type="radio"],
+.qblock input[type="checkbox"] {
+  margin-right: .25rem;
+}
+
+.qblock label img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: middle;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+
+.feedback {
+  margin-top: .5rem;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.feedback .icon {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.feedback .text {
+  font-weight: bold;
+}
+
+.actions {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+button {
+  background-color: navy;
+  color: white;
+  border: none;
+  padding: .6rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 0 .5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+#resetBtn {
+  background-color: lightgray;
+  color: black;
+}
+
+#resetBtn:hover {
+  background-color: gray;
+}
+
+.results {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  border: 1px solid gray;
+  background: white;
+  border-radius: 6px;
+}
+
+#scoreLine {
+  font-weight: bold;
+}
+
+#congrats {
+  color: green;
+  font-weight: bold;
+  margin-top: .5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: gainsboro;
+  color: dimgray;
+  font-size: .9rem;
+}
