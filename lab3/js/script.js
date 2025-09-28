@@ -50,7 +50,7 @@ function grade() {
   const needed = ["cerb", "hydra", "araxxor"].sort();
   const q4ok = picked.length === needed.length && picked.every((v, i) => v === needed[i]);
   if (q4ok) score += 20;
-  setFeedback("#q4", q4ok, q4ok ? "Correct." : "Pick Cerberus, Alchemical Hydra, and Araxxor.");
+  setFeedback("#q4", q4ok, q4ok ? "Correct." : "Pick Cerberus, Alchemical Hydra, and Araxxor. TzKal-Zuk does not have a Slayer requirement, however is very difficult.");
 
   const q5 = document.querySelector('input[name="q5"]:checked');
   const q5ok = q5 && q5.value === "torva";
