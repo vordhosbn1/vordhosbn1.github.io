@@ -57,7 +57,7 @@ function grade() {
   document.querySelector("#scoreLine").textContent = `Score: ${score} / 100`;
   const tries = Number(localStorage.getItem("osrsQuizTries") || "0") + 1;
   localStorage.setItem("osrsQuizTries", String(tries));
-  document.querySelector("#triesLine").textContent = `Times taken: ${tries}`;
+  document.querySelector("#triesLine").textContent = `Times quiz taken: ${tries}`;
   if (score >= 80) document.querySelector("#congrats").textContent = "Great job! ";
 }
 
