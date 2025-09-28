@@ -24,6 +24,9 @@ function clearAllFeedback() {
   document.querySelector("#scoreLine").textContent = "Score: 0 / 100";
 }
 
+// probably dont call the feedback up on the top as well as the shuffle, maybe put it inside of the reset button as well as when you refresh the page. 
+
+
 function grade() {
   let score = 0;
 
