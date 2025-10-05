@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 4:Sig Up Page</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 4: Sign Up Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-center align-items-center vh-100 bg-light">
 
-    <h1> Sign Up Form </h1>
+  <div class="p-4 bg-white border rounded shadow" style="max-width: 450px; width: 100%;">
+    <h1 class="h3 mb-4 text-center text-primary">Sign Up Form</h1>
 
-    <fieldset>
-        <legend>Sign Up</legend>
-        First Name: <input type="text"><br>
-        Last Name: <input type="text"><br>
-        Email: <input type="text"><br>
-        Phone Number:<input type="text"><br><br>
-        Zip Code: <input id="zip" type="text"><br>
-        City: <span id="city"></span>
-        <br>
-        Latitude: <span id="lat"></span>
-        <br>
+    <form id="signupForm" novalidate> <!-- shouldnt validate; checked w3 schools. -->
+      <div class="mb-2">
+        <input id="firstName" type="text" class="form-control" placeholder="First Name">
+      </div>
+      <div class="mb-2">
+        <input id="lastName" type="text" class="form-control" placeholder="Last Name">
+      </div>
+      <div class="mb-2">
+        <input id="email" type="email" class="form-control" placeholder="Email">
+      </div>
+      <div class="mb-2">
+        <input id="phone" type="tel" class="form-control" placeholder="Phone Number">
+      </div>
+
+      <div class="mb-2 d-flex align-items-center">
+        <input id="zip" type="text" maxlength="5" class="form-control me-2" placeholder="Zip Code">
+        <span id="zipMsg" class="small"></span>
+      </div>
+
+      <div class="small text-muted text-start mb-2">
+        City: <span id="city"></span><br>
+        Latitude: <span id="lat"></span><br>
         Longitude: <span id="long"></span>
-        <br><br>
-        State: 
-        <select id="state">
-        </select><br>
-        Select a County: <select id="county"></select><br>
+      </div>
 
-        Desired Username: <input type="text"><span id="userSpan"></span><br>
-        Password: <input type="password"><br>Suggested Password<div id="passwordSug"></div> 
-        Type Password Again: <input type="password"><br>
-        <input type="submit" value="Sign up!">
-    </fieldset>
+      <div class="mb-2">
+        <select id="state" class="form-select">
+          <option value="">-- Select State --</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <select id="county" class="form-select">
+          <option value="">-- Select County --</option>
+        </select>
+      </div>
+
+      <div class="mb-2 d-flex align-items-center">
+        <input id="username" type="text" class="form-control me-2" placeholder="Desired Username">
+        <span id="userSpan" class="small"></span>
+      </div>
+
+      <div class="mb-2">
+        <input id="password" type="password" class="form-control" placeholder="Password">
+      </div>
+
+      <div class="mb-2 d-flex align-items-center">
+        <button id="passwordSugBtn" type="button" class="btn btn-secondary btn-sm me-2">Suggest Password (8)</button>
+        <div id="passwordSug" class="small text-muted"></div>
+      </div>
+
+      <div class="mb-2">
+        <input id="password2" type="password" class="form-control" placeholder="Re-type Password">
+        <span id="pwMsg" class="small"></span>
+      </div>
+
+      <div class="text-center mt-3">
+        <input id="submitBtn" type="submit" value="Sign Up" class="btn btn-primary w-100">
+      </div>
+    </form>
+  </div>
 
 
 </body>
-    <script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </html>
