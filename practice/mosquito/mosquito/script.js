@@ -6,7 +6,7 @@ let attempts = 0;
 document.addEventListener("click", onDocClick);
 mosquito.addEventListener("click", gameOver);
 
-//clicking on any place within the document40
+//clicking on any place within the document
 function onDocClick(event) {
   if (event.target.id != "#mosquito") { //didn't hit the mosquito
 	attempts++;

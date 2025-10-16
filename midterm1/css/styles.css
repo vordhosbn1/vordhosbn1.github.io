@@ -1,0 +1,72 @@
+button:hover{
+    transform: translateY(-1px);
+}
+
+button:hover {
+  background-color: blue;
+}
+
+button.active{
+    outline: 3px solid white;
+}
+
+label img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: middle;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+button {
+  background-color: navy;
+  color: white;
+  border: none;
+  padding: .6rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 0 .5rem;
+  cursor: pointer;
+}
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    color:red;
+    margin: auto;
+    text-align: center;
+}
+
+iframe{
+
+    width: 560px;
+    height: 315px;
+    margin: auto;
+    display: block;
+}
+
+#showLikes{
+    text-align: center;
+}
+
+
+#likesNow{
+    text-align: center;
+}
+
+#dislikesNow{
+    text-align: center;
+}
+
+#questionInfo{
+    text-align: center;
+}
+
+#submitBtn{
+    text-align: center;
+}
+
+
+
+
+

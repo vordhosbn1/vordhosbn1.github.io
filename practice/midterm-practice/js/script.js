@@ -4,7 +4,7 @@ document.querySelector("#authorInfo").addEventListener("click", displayInfo);
 
 
 let data;
-displayQ();
+displayInfo();
 // author
 
 async function displayQuote() {
@@ -33,37 +33,37 @@ async function displayInfo() {
 
 }
 
-async function translateQuote() {
-    let url = "https://csumb.space/api/famousQuotes/translateQuote.php?lang=ES&quoteId=2";
-    let response = await fetch(url);
-    let data = await response.json();
+// async function translateQuote() {
+//     let url = "https://csumb.space/api/famousQuotes/translateQuote.php?lang=ES&quoteId=2";
+//     let response = await fetch(url);
+//     let data = await response.json();
 
-    const section = document.querySelector("#q5");
-    const feedback = section.querySelector(".feedback");
-    const labels = Array.from(section.querySelectorAll("label"));
-
-
-    labels.sort(() => Math.random() - 0.5);
-
-    const frag = document.createDocumentFragment();
-    labels.forEach(lab => frag.appendChild(lab));
+//     const section = document.querySelector("#q5");
+//     const feedback = section.querySelector(".feedback");
+//     const labels = Array.from(section.querySelectorAll("label"));
 
 
-    section.insertBefore(frag, feedback);
-}
+//     labels.sort(() => Math.random() - 0.5);
 
-function displayQ(){
-    let qOp = ["English","Spanish","French","Esperanto"];
-    qOp = _.shuffle(qOp);
-    for( let i of qOp){
-        let inputEle = document.createElement("input");
-        inputEle.type = "radio";
-        inputEle.name = "q1";
-        inputEle.value = i;
-        console.log(inputEle);
-        let labelEle = document.createElement("label");
-        labelEle.textContent = i;
-        labelEle.prepend(inputEle);
-        document.querySelector("#question").append(labelEle);
-    }
-}
+//     const frag = document.createDocumentFragment();
+//     labels.forEach(lab => frag.appendChild(lab));
+
+
+//     section.insertBefore(frag, feedback);
+// }
+
+// function displayQ(){
+//     let qOp = ["English","Spanish","French","Esperanto"];
+//     qOp = _.shuffle(qOp);
+//     for( let i of qOp){
+//         let inputEle = document.createElement("input");
+//         inputEle.type = "radio";
+//         inputEle.name = "q1";
+//         inputEle.value = i;
+//         console.log(inputEle);
+//         let labelEle = document.createElement("label");
+//         labelEle.textContent = i;
+//         labelEle.prepend(inputEle);
+//         document.querySelector("#question").append(labelEle);
+//     }
+// }
